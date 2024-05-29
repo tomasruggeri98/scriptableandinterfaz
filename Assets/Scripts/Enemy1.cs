@@ -13,4 +13,14 @@ public class Enemy1 : MonoBehaviour, IPresentacion
     {
         Accion();
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Verificar si el objeto con el que hemos colisionado tiene el tag "Player"
+        if (other.CompareTag("Player"))
+        {
+            // Llamar al método Accion
+            Accion();
+        }
+    }
 }
